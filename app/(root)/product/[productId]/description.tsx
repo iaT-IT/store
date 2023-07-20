@@ -6,10 +6,13 @@ const Description = () => {
    return (
       <div className="flex flex-col gap-4">
          <span className="text-neutral-900 text-base font-semibold flex items-center justify-center gap-10">
-            <Separator className="w-1/2" /> Description{' '}
+            <Separator className="w-1/2 " />{' '}
+            <p className="dark:text-white">Description</p>{' '}
             <Separator className="w-1/2" />
          </span>
-         <span className="text-neutral-500 text-sm">{text}</span>
+         <span className="text-neutral-500 text-sm dark:text-neutral-400">
+            {text}
+         </span>
       </div>
    );
 };

@@ -8,13 +8,12 @@
 6. npx shadcn-ui@latest add separator
 7. npx shadcn-ui@latest add sheet
 8. npx shadcn-ui@latest add tabs
+9. npx shadcn-ui@latest add tooltip
 
 ## Package
 
 1. npm i axios
 2. npm i react-hot-toast
 3. npm i next-themes
-4. npm i slick-carousel
-5. npm i react-slick --save
-6. npm i query-string
-7. npm i zustand
+4. npm i query-string
+5. npm i zustand

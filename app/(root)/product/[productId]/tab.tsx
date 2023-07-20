@@ -1,5 +1,6 @@
 'use client';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import TooltipInfo from '@/helpers/tooltip-info';
 import { cn } from '@/lib/utils';
 import { Image as ImageType } from '@/type';
 import Image from 'next/image';
@@ -14,10 +15,10 @@ const Tab: React.FC<TabProps> = ({ images }) => {
       <>
          <Tabs
             defaultValue={images[0].id}
-            className="grid grid-cols-5 gap-2"
+            className="grid grid-cols-1 md:grid-cols-5 gap-2"
             onValueChange={(value) => setActive(value)}
          >
-            <TabsList className="col-span-1 grid grid-cols-1 bg-transparent bg-neutral-200 rounded-md h-full">
+            <TabsList className="md:col-span-1 grid grid-cols-1 bg-transparent bg-neutral-200 rounded-md h-full">
                {images.map((image) => (
                   <TabsTrigger
                      key={image.id}
@@ -29,7 +30,7 @@ const Tab: React.FC<TabProps> = ({ images }) => {
                            : 'border-2 border-neutral-500',
                      )}
                   >
-                     <div className="">
+                     <TooltipInfo text="Click to preview">
                         <Image
                            alt=""
                            src={image.url}
@@ -38,7 +39,7 @@ const Tab: React.FC<TabProps> = ({ images }) => {
                            sizes="100vw"
                            className="w-full object-contain object-center aspect-square "
                         />
-                     </div>
+                     </TooltipInfo>
                   </TabsTrigger>
                ))}
             </TabsList>

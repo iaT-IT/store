@@ -1,19 +1,12 @@
 'use client';
-import countdown from '@/public/countdown/1.webp';
-import Image from 'next/image';
-import CountDownTimer from './countdown-timer';
-import { useEffect, useState } from 'react';
-import {
-   Card,
-   CardContent,
-   CardDescription,
-   CardFooter,
-   CardHeader,
-   CardTitle,
-} from '../ui/card';
 import { cn } from '@/lib/utils';
+import countdown from '@/public/countdown/1.webp';
 import { Cookie } from 'next/font/google';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import ShopButton from '../shop-button';
+import { Card, CardContent } from '../ui/card';
+import CountDownTimer from './countdown-timer';
 const font = Cookie({ subsets: ['latin'], weight: '400' });
 
 const CountdownCard = () => {
@@ -52,7 +45,7 @@ const CountdownCard = () => {
                </CardContent>
                <div className="flex flex-col gap-2 items-center">
                   <CountDownTimer deadline={deadline} />
-                  <ShopButton button="Shop now" />
+                  <ShopButton button="SHOP NOW" />
                </div>
             </Card>
          </div>

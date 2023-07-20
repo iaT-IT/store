@@ -4,8 +4,8 @@ import TrendList from './trend-list';
 
 const Trend = () => {
    return (
-      <div className="py-10">
-         <Container>
+      <div className="py-5 md:py-10">
+         <Container className="mx-5 md:mx-14">
             {' '}
             <TrendList />
          </Container>

@@ -50,7 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                </div>
             </CardContent>
             <CardFooter className="flex flex-col gap-2 pt-4">
-               <CardDescription className="text-xs dark:to-neutral-200">
+               <CardDescription className="text-xs dark:text-neutral-200">
                   {product.name}
                </CardDescription>
                <div className="flex gap-1">

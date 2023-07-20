@@ -2,8 +2,8 @@ import { CircleDollarSign, Headphones, LifeBuoy, Truck } from 'lucide-react';
 import Container from '../ui/container';
 const Service = () => {
    return (
-      <div className="py-5 md:py-10">
-         <Container>
+      <div className="py-0 md:py-5 ">
+         <Container className="mx-5 md:mx-14">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-5">
                {ServiceItem().map((item) => (
                   <div

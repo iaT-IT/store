@@ -9,7 +9,10 @@ const Product = () => {
             {' '}
             <div className="pb-5 pl-2">
                {' '}
-               <Heading text={'New Product'} />
+               <Heading
+                  text={'New Product'}
+                  active
+               />
             </div>
             <ProductList />
          </Container>

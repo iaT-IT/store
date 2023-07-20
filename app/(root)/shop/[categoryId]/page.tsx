@@ -1,7 +1,7 @@
-import getProducts, { Query } from '@/actions/getProducts';
+import getProducts from '@/actions/getProducts';
 import ProductCard from '@/components/(product)/product-card';
 import NoResult from '@/components/no-result';
-import { Product } from '@/type';
+import { Query } from '@/type';
 
 const ProductPage = async ({
    params: { categoryId },

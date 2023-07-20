@@ -28,7 +28,7 @@ const TrendCard: React.FC<TrendCardProps> = ({ product }) => {
             </div>
          </CardContent>
          <CardFooter className="flex flex-col gap-2 pt-4 col-span-2 p-2 items-start">
-            <CardDescription className="text-xs">
+            <CardDescription className="text-xs dark:text-neutral-200">
                {product.name}
             </CardDescription>
             <div className="flex gap-1">

@@ -2,8 +2,9 @@
 import Heading from '@/components/heading';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
 import { Category, Color, Size } from '@/type';
-import { Eraser, Filter, X, XCircle } from 'lucide-react';
+import { Eraser, Filter, XCircle } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import qs from 'query-string';
 import { useState } from 'react';
@@ -71,18 +72,13 @@ const MobileFilter: React.FC<MobileFilterProps> = ({
                               <Button
                                  onClick={() => onClick('categoryId', item)}
                                  key={item.id}
-                                 className="bg-transparent text-neutral-900 border border-neutral-900 hover:opacity-70 "
+                                 className={cn(
+                                    'bg-transparent text-neutral-900 dark:text-neutral-200 dark:border-neutral-200 border border-neutral-900 hover:opacity-70',
+                                    searchParams.get(category) === item.id
+                                       ? 'dark:bg-white bg-black dark:text-black text-white'
+                                       : '',
+                                 )}
                                  variant={'outline'}
-                                 style={{
-                                    backgroundColor:
-                                       searchParams.get(category) === item.id
-                                          ? 'black'
-                                          : 'transparent',
-                                    color:
-                                       searchParams.get(category) === item.id
-                                          ? 'white'
-                                          : '',
-                                 }}
                               >
                                  {item.name}
                               </Button>
@@ -101,7 +97,7 @@ const MobileFilter: React.FC<MobileFilterProps> = ({
                         <Button
                            onClick={() => onClick('colorId', item)}
                            key={item.id}
-                           className="bg-transparent text-neutral-900 border border-neutral-900 hover:opacity-70 "
+                           className="bg-transparent text-neutral-900 border border-neutral-900 hover:opacity-70 dark:text-neutral-200 dark:border-neutral-200"
                            variant={'outline'}
                            style={{
                               backgroundColor:
@@ -129,18 +125,13 @@ const MobileFilter: React.FC<MobileFilterProps> = ({
                         <Button
                            onClick={() => onClick('sizeId', item)}
                            key={item.id}
-                           className="bg-transparent text-neutral-900 border border-neutral-900 hover:opacity-70 "
+                           className={cn(
+                              'bg-transparent text-neutral-900 border border-neutral-900 hover:opacity-70  dark:text-neutral-200 dark:border-neutral-200',
+                              searchParams.get(size) === item.id
+                                 ? 'dark:bg-white bg-black dark:text-black text-white'
+                                 : '',
+                           )}
                            variant={'outline'}
-                           style={{
-                              backgroundColor:
-                                 searchParams.get(size) === item.id
-                                    ? 'black'
-                                    : 'transparent',
-                              color:
-                                 searchParams.get(size) === item.id
-                                    ? 'white'
-                                    : '',
-                           }}
                         >
                            {item.name}
                         </Button>
@@ -155,9 +146,9 @@ const MobileFilter: React.FC<MobileFilterProps> = ({
                      setSize(''),
                      setColor('')
                   )}
-                  className=" rounded-md  py-2 border border-neutral-900 flex justify-center items-center gap-5 hover:bg-red-600 group hover:text-white  cursor-pointer"
+                  className=" rounded-md  py-2 border border-neutral-900  dark:border-neutral-200  flex justify-center items-center gap-5 hover:bg-red-600 group hover:text-white  cursor-pointer"
                >
-                  <span className="text-black group-hover:text-white ">
+                  <span className="text-black group-hover:text-white dark:text-neutral-200">
                      Clear
                   </span>
                   <Eraser

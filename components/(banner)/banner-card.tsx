@@ -15,7 +15,7 @@ const BannerCard = () => {
          >
             The Project Jacket
          </span>
-         <ShopButton button="Shop now" />
+         <ShopButton button="SHOP NOW" />
       </div>
    );
 };

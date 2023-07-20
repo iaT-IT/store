@@ -3,7 +3,6 @@ import {
    CardContent,
    CardDescription,
    CardFooter,
-   CardTitle,
 } from '@/components/ui/card';
 import { Product } from '@/type';
 import { Star } from 'lucide-react';

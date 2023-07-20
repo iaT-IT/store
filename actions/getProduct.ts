@@ -1,13 +1,8 @@
-import { Product } from '@/type';
+import { Product, Query } from '@/type';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import qs from 'query-string';
-export interface Query {
-   categoryId?: string;
-   colorId?: string;
-   sizeId?: string;
-   isFeatured?: boolean;
-}
+
 const key = 'products';
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/${key}`;
 const getProducts = async (query: Query): Promise<Product[]> => {

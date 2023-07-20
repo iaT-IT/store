@@ -1,12 +1,9 @@
-import { Category } from '@/type';
-import ActionNav from './action-nav';
 import Logo from '@/helpers/logo';
+import { Menu } from 'lucide-react';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '../ui/sheet';
+import ActionNav from './action-nav';
 import MainNav from './main-nav';
 import { HeaderProps } from './normal-header';
-import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
-import Heading from '../heading';
-import { Button } from '../ui/button';
-import { Menu, XCircle } from 'lucide-react';
 
 const MobileHeader: React.FC<HeaderProps> = ({ categories }) => {
    return (
@@ -24,11 +21,13 @@ const MobileHeader: React.FC<HeaderProps> = ({ categories }) => {
                className="pt-14"
                side={'left'}
             >
-               <div className="flex flex-col gap-4 relative">
-                  <ActionNav />
-                  <Logo />
-                  <MainNav categories={categories} />
-               </div>
+               <SheetClose>
+                  <div className="flex flex-col gap-4 relative">
+                     <ActionNav />
+                     <Logo />
+                     <MainNav categories={categories} />
+                  </div>
+               </SheetClose>
             </SheetContent>
          </Sheet>
       </div>

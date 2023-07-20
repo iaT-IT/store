@@ -35,3 +35,10 @@ export interface Product {
    color: Color;
    size: Size;
 }
+
+export interface Query {
+   categoryId?: string;
+   colorId?: string;
+   sizeId?: string;
+   isFeatured?: boolean;
+}

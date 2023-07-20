@@ -1,4 +1,5 @@
 'use client';
+import { Separator } from '@/components/ui/separator';
 import useCart from '@/hooks/useCart';
 import { formatter } from '@/lib/utils';
 
@@ -11,46 +12,50 @@ const CartCheckout = () => {
       return cost;
    };
    return (
-      <div className="grid grid-cols-1 gap-3 md:gap-0 md:grid-cols-3">
-         <div className="rounded-full flex items-center border border-neutral-500 dark:bg-white justify-between h-10 col">
-            <div className="px-3 text-sm dark:text-black">
-               {' '}
-               Enter your coupon code
+      <>
+         <Separator />
+
+         <div className="grid grid-cols-1 gap-3 md:gap-0 md:grid-cols-3">
+            <div className="rounded-full flex items-center border border-neutral-500 dark:bg-white justify-between h-10 col">
+               <div className="px-3 text-sm dark:text-black">
+                  {' '}
+                  Enter your coupon code
+               </div>
+               <div className="w-1/4 py-1  mr-1    bg-red-600 rounded-full uppercase text-white font-bold text-center text-sm flex items-center justify-center">
+                  APPLY
+               </div>
             </div>
-            <div className="w-1/4 py-1  mr-1    bg-red-600 rounded-full uppercase text-white font-bold text-center text-sm flex items-center justify-center">
-               APPLY
+            <div></div>
+            <div className="flex flex-col gap-3 p-4 bg-neutral-200 rounded-md text-slate-900 font-semibold">
+               <h2 className="uppercase">Cart Total</h2>
+               <div className="flex justify-between items-center">
+                  {' '}
+                  <h2 className="">Subtotal</h2>
+                  <span
+                     className="text-base 
+                         font-bold text-red-500"
+                  >
+                     {formatter.format(getTotal())}
+                  </span>
+               </div>
+               <div className="flex justify-between items-center">
+                  {' '}
+                  <h2 className="">Total</h2>
+                  <span
+                     className="text-base 
+                         font-bold text-red-500"
+                  >
+                     {formatter.format(getTotal())}
+                  </span>
+               </div>
+               <div className="w-full px-2 py-2 bg-red-600 rounded-full flex items-center justify-center">
+                  <span className="uppercase font-bold text-white text-sm">
+                     Process To Checkout
+                  </span>
+               </div>
             </div>
          </div>
-         <div></div>
-         <div className="flex flex-col gap-3 p-4 bg-neutral-200 rounded-md text-slate-900 font-semibold">
-            <h2 className="uppercase">Cart Total</h2>
-            <div className="flex justify-between items-center">
-               {' '}
-               <h2 className="">Subtotal</h2>
-               <span
-                  className="text-base 
-                      font-bold text-red-500"
-               >
-                  {formatter.format(getTotal())}
-               </span>
-            </div>
-            <div className="flex justify-between items-center">
-               {' '}
-               <h2 className="">Total</h2>
-               <span
-                  className="text-base 
-                      font-bold text-red-500"
-               >
-                  {formatter.format(getTotal())}
-               </span>
-            </div>
-            <div className="w-full px-2 py-2 bg-red-600 rounded-full flex items-center justify-center">
-               <span className="uppercase font-bold text-white text-sm">
-                  Process To Checkout
-               </span>
-            </div>
-         </div>
-      </div>
+      </>
    );
 };
 

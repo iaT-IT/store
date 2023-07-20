@@ -1,17 +1,14 @@
-import getProducts, { Query } from '@/actions/getProducts';
-import Filter from '../filter';
-import MobileFilter from '../mobile-filter';
+import getCategories from '@/actions/getCategories';
 import getColors from '@/actions/getColors';
 import getSizes from '@/actions/getSizes';
-import getCategories from '@/actions/getCategories';
 import Container from '@/components/ui/container';
+import Filter from '../filter';
+import MobileFilter from '../mobile-filter';
 
 export default async function RootLayout({
    children,
-   searchParams,
 }: {
    children: React.ReactNode;
-   searchParams: Query;
 }) {
    const colors = await getColors();
    const sizes = await getSizes();

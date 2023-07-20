@@ -4,6 +4,7 @@ import Header from '@/components/(header)/header';
 import ToastProvider from '@/providers/toast-provider';
 import { Montserrat } from 'next/font/google';
 import { ThemeProvider } from '@/providers/theme-provider';
+import TooltipProvider from '@/providers/tooltip-provider';
 
 const font = Montserrat({ subsets: ['latin'] });
 
@@ -22,13 +23,15 @@ export default function RootLayout({
          <body className={font.className}>
             <ThemeProvider
                attribute="class"
-               defaultTheme="system"
+               defaultTheme="light"
                enableSystem
             >
-               <ToastProvider />
-               <Header />
-               {children}
-               <Footer />
+               <TooltipProvider>
+                  <ToastProvider />
+                  <Header />
+                  {children}
+                  <Footer />
+               </TooltipProvider>
             </ThemeProvider>
          </body>
       </html>

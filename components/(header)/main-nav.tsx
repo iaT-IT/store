@@ -1,9 +1,9 @@
 'use client';
 import { Category } from '@/type';
-import Link from 'next/link';
 import Shop from './shop';
 import Scale from '@/helpers/scale';
 import { usePathname, useRouter } from 'next/navigation';
+import TooltipInfo from '@/helpers/tooltip-info';
 
 interface MainNavProps {
    categories: Category[];
@@ -20,23 +20,32 @@ const MainNav: React.FC<MainNavProps> = ({ categories }) => {
                   onClick={() => router.push('/')}
                   className="relative cursor-pointer"
                >
-                  <span className="peer ">Home</span>
-                  <Scale active={pathname === '/'} />
+                  <TooltipInfo text="Home">
+                     <span className="peer ">Home</span>
+                     <Scale active={pathname === '/'} />
+                  </TooltipInfo>
                </div>
             </div>
             <div>
-               <Shop
-                  categories={categories}
-                  active={pathname.includes('/shop')}
-               />
+               <TooltipInfo text="Click to Shopping">
+                  <Shop
+                     categories={categories}
+                     active={
+                        pathname.includes('/shop') ||
+                        pathname.includes('/product')
+                     }
+                  />
+               </TooltipInfo>
             </div>
             <div>
                <div
                   onClick={() => router.push('/')}
                   className="relative cursor-pointer"
                >
-                  <span className="peer ">Pages</span>
-                  <Scale />
+                  <TooltipInfo text="Home">
+                     <span className="peer ">Pages</span>
+                     <Scale />
+                  </TooltipInfo>
                </div>
             </div>
             <div>
@@ -44,8 +53,10 @@ const MainNav: React.FC<MainNavProps> = ({ categories }) => {
                   onClick={() => router.push('/')}
                   className="relative cursor-pointer"
                >
-                  <span className="peer">Blog</span>
-                  <Scale />
+                  <TooltipInfo text="Home">
+                     <span className="peer">Blog</span>
+                     <Scale />
+                  </TooltipInfo>
                </div>
             </div>
             <div>
@@ -53,12 +64,15 @@ const MainNav: React.FC<MainNavProps> = ({ categories }) => {
                   onClick={() => router.push('/cart')}
                   className="relative cursor-pointer"
                >
-                  <span className="peer ">Checkout</span>
-                  <Scale active={pathname.includes('/cart')} />
+                  <TooltipInfo text="Click to Checkout">
+                     <span className="peer ">Checkout</span>
+                     <Scale active={pathname.includes('/cart')} />
+                  </TooltipInfo>
                </div>
             </div>
          </div>
       </>
    );
 };
+
 export default MainNav;

@@ -12,7 +12,6 @@ interface RelatedProps {
 const Related: React.FC<RelatedProps> = async ({ category, productId }) => {
    let products = await getProducts({ categoryId: category.id });
    products = products.filter((product) => product.id !== productId);
-   console.log('🚀 ~ products:', products);
    return (
       <div>
          <Separator />

@@ -1,5 +1,6 @@
 'use client';
 import Heading from '@/components/heading';
+import TooltipInfo from '@/helpers/tooltip-info';
 import useCart from '@/hooks/useCart';
 import { formatter } from '@/lib/utils';
 import { Product } from '@/type';
@@ -31,7 +32,7 @@ const Info: React.FC<InfoProps> = ({ product }) => {
                text={product.name}
                className="text-2xl"
             />
-            <span className="text-neutral-500 text-sm">
+            <span className="text-neutral-500 text-sm dark:text-neutral-200">
                Brand: {product.category.name}
             </span>
          </div>
@@ -44,14 +45,16 @@ const Info: React.FC<InfoProps> = ({ product }) => {
                   className="text-yellow-400"
                />
             ))}
-            <span className="text-neutral-500 text-xs">
+            <span className="text-neutral-500 text-xs dark:text-neutral-200">
                ({Math.floor(Math.random() * 200)} reviews)
             </span>
          </div>
          <span className=" text-2xl font-bold text-red-600">
             {formatter.format(Number(product.price))}
          </span>
-         <span className="text-neutral-600 text-xs">{text}</span>
+         <span className="text-neutral-600 text-xs dark:text-neutral-400">
+            {text}
+         </span>
          <div className="flex justify-between gap-10 items-center">
             <div
                onClick={cartClick}
@@ -61,25 +64,31 @@ const Info: React.FC<InfoProps> = ({ product }) => {
                   Add To Cart
                </span>
             </div>
-            <div
-               onClick={heartClick}
-               className="hover:rotate-[360deg] border border-black hover:border-white hover:bg-red-600 hover:text-white cursor-pointer  duration-500  p-2 rounded-full bg-white"
-            >
-               <Heart size={25} />
-            </div>
+            <TooltipInfo text="Add to wish list">
+               <div
+                  onClick={heartClick}
+                  className="hover:rotate-[360deg] border border-black hover:border-white hover:bg-red-600 hover:text-white cursor-pointer  duration-500  p-2 rounded-full bg-white dark:text-black dark:hover:text-white dark:border-black"
+               >
+                  <Heart size={25} />
+               </div>
+            </TooltipInfo>
          </div>
          <div className="flex flex-col gap-3">
             <div className=" items-center gap-5 grid grid-cols-4">
-               <span className="text-black text-sm font-semibold">Color:</span>
+               <span className="text-black text-sm font-semibold dark:text-neutral-200">
+                  Color:
+               </span>
                <span
                   className=" 
-                         flex w-8 h-8 rounded-full border bg-neutral-900"
+                         flex w-8 h-8 rounded-full border bg-neutral-900 "
                   style={{ backgroundColor: product.color.value }}
                />
             </div>
-            <div className="grid grid-cols-4 items-center gap-5">
-               <span className="text-black text-sm font-semibold">Size:</span>
-               <span className="text-black text-sm font">
+            <div className="grid grid-cols-4 items-center gap-5 ">
+               <span className="text-black text-sm font-semibold dark:text-neutral-200">
+                  Size:
+               </span>
+               <span className="text-black text-sm font dark:text-neutral-200">
                   {product.size.name}
                </span>
             </div>

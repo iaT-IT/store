@@ -18,7 +18,7 @@ const ProductPage = async ({
    ) as Product;
 
    return (
-      <Container>
+      <Container className="mx-5 md:mx-14">
          <div className="flex flex-col gap-8">
             <Separator />
 
