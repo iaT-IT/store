@@ -1,8 +1,8 @@
 import Logo from '@/helpers/logo';
 import { Menu } from 'lucide-react';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '../ui/sheet';
-import ActionNav from './action-nav';
-import MainNav from './main-nav';
+import ActionNav from './(navbar)/action-nav';
+import MainNav from './(navbar)/main-nav';
 import { HeaderProps } from './normal-header';
 
 const MobileHeader: React.FC<HeaderProps> = ({ categories }) => {

@@ -1,10 +1,10 @@
 'use client';
-import Heading from '@/components/heading';
+import Heading from '@/helpers/heading';
 import useCart from '@/hooks/useCart';
-import CartItem from '../cart-item';
+import CartItem from '../../components/cart-item';
 import { formatter } from '@/lib/utils';
 import { X } from 'lucide-react';
-import NoResult from '@/components/no-result';
+import NoResult from '@/helpers/no-result';
 import { useRouter } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
 

@@ -1,5 +1,5 @@
-import Heading from '../heading';
-import Container from '../ui/container';
+import Heading from '../../../helpers/heading';
+import Container from '../../ui/container';
 import TrendList from './trend-list';
 
 const Trend = () => {

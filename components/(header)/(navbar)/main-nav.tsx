@@ -11,7 +11,6 @@ interface MainNavProps {
 const MainNav: React.FC<MainNavProps> = ({ categories }) => {
    const router = useRouter();
    const pathname = usePathname();
-   console.log('🚀 ~ pathname:', pathname);
    return (
       <>
          <div className="flex flex-col md:flex-row items-center gap-5 text-sm uppercase   tracking-wider ">

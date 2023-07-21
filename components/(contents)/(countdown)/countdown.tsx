@@ -1,4 +1,4 @@
-import Container from '../ui/container';
+import Container from '../../ui/container';
 import CountdownCard from './countdown-card';
 
 const CountDown = () => {

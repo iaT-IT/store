@@ -1,5 +1,5 @@
 'use client';
-import Heading from '@/components/heading';
+import Heading from '@/helpers/heading';
 import TooltipInfo from '@/helpers/tooltip-info';
 import useCart from '@/hooks/useCart';
 import { formatter } from '@/lib/utils';

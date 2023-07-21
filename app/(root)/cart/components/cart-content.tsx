@@ -1,6 +1,6 @@
 'use client';
-import Heading from '@/components/heading';
-import NoResult from '@/components/no-result';
+import Heading from '@/helpers/heading';
+import NoResult from '@/helpers/no-result';
 import { Separator } from '@/components/ui/separator';
 import useCart from '@/hooks/useCart';
 import { formatter } from '@/lib/utils';

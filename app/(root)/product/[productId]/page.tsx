@@ -1,8 +1,8 @@
 import Container from '@/components/ui/container';
-import Tab from './tab';
-import Info from './info';
-import Description from './description';
-import Related from './related';
+import Tab from './components/tab';
+import Info from './components/info';
+import Description from './components/description';
+import Related from './components/related';
 import getProducts from '@/actions/getProducts';
 import { Product } from '@/type';
 import { Separator } from '@/components/ui/separator';

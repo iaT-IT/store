@@ -4,8 +4,8 @@ import countdown from '@/public/countdown/1.webp';
 import { Cookie } from 'next/font/google';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import ShopButton from '../shop-button';
-import { Card, CardContent } from '../ui/card';
+import ShopButton from '../../../helpers/shop-button';
+import { Card, CardContent } from '../../ui/card';
 import CountDownTimer from './countdown-timer';
 const font = Cookie({ subsets: ['latin'], weight: '400' });
 

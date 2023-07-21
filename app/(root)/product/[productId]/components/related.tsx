@@ -2,7 +2,7 @@ import getProducts from '@/actions/getProducts';
 import Container from '@/components/ui/container';
 import { Category } from '@/type';
 import RelatedCard from './related-card';
-import Heading from '@/components/heading';
+import Heading from '@/helpers/heading';
 import { Separator } from '@/components/ui/separator';
 
 interface RelatedProps {

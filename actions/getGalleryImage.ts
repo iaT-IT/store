@@ -10,36 +10,30 @@ const getGalleryImage = () => {
          title: 'Women’s fashion',
          text: 'Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna aliquapendisse ultrices gravida.',
          button: 'SHOP NOW',
-         font: 'Cookie',
       },
       {
          image: b,
          title: 'Men’s fashion',
          text: '358 items',
          button: 'SHOP NOW',
-         font: 'Cookie',
       },
       {
          image: c,
          title: 'Kid’s fashion',
          text: '273 items',
          button: 'SHOP NOW',
-         font: 'Cookie',
       },
       {
          image: d,
          title: 'Cosmetics',
          text: '159 items',
          button: 'SHOP NOW',
-         font: 'Cookie',
       },
       {
          image: e,
          title: 'Accessories',
          text: '792 items',
          button: 'SHOP NOW',
-
-         font: 'Cookie',
       },
    ];
 };

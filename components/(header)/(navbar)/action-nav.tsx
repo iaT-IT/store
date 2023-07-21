@@ -1,6 +1,6 @@
 'use client';
 import { Heart, ShoppingBag } from 'lucide-react';
-import { ThemeToggle } from '../theme-toggle';
+import { ThemeToggle } from '../../../helpers/theme-toggle';
 import useCart from '@/hooks/useCart';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';

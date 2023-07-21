@@ -7,8 +7,8 @@ import d from '@/public/footer/4.png';
 import e from '@/public/footer/5.ico';
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 import Image from 'next/image';
-import SocialMedia from '../(instagram)/instagram';
-import Heading from '../heading';
+import SocialMedia from './(instagram)/instagram';
+import Heading from '../../helpers/heading';
 import Container from '../ui/container';
 const Footer = () => {
    const text =

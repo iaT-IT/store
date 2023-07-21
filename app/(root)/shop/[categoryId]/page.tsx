@@ -1,6 +1,6 @@
 import getProducts from '@/actions/getProducts';
-import ProductCard from '@/components/(product)/product-card';
-import NoResult from '@/components/no-result';
+import ProductCard from '@/components/(contents)/(product)/product-card';
+import NoResult from '@/helpers/no-result';
 import { Query } from '@/type';
 
 const ProductPage = async ({

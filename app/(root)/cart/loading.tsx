@@ -1,4 +1,4 @@
-import LoadingPage from '@/components/loading-page';
+import LoadingPage from '@/helpers/loading-page';
 
 const Loading = () => {
    return <LoadingPage />;

@@ -1,5 +1,5 @@
 'use client';
-import Heading from '@/components/heading';
+import Heading from '@/helpers/heading';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';

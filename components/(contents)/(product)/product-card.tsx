@@ -63,10 +63,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                      />
                   ))}
                </div>
-               <CardTitle className={cn(' flex items-center gap-2')}>
+               <CardTitle className={cn(' flex items-end gap-2 ')}>
                   {random < 3 && active[random].type === 2 && (
                      <span className=" text-lg text-red-500">
-                        {formatter.format(Number(product.price))}
+                        {formatter.format(Number(product.price) - 10)}
                      </span>
                   )}
                   {

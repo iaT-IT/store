@@ -9,8 +9,8 @@ import TooltipProvider from '@/providers/tooltip-provider';
 const font = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
-   title: 'Clothes Shop',
-   description: 'Clothes Shop',
+   title: 'Clothing Store',
+   description: 'Clothing Store',
 };
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 import { Category } from '@/type';
-import ActionNav from './action-nav';
+import ActionNav from './(navbar)/action-nav';
 import Logo from '@/helpers/logo';
-import MainNav from './main-nav';
+import MainNav from './(navbar)/main-nav';
 export interface HeaderProps {
    categories: Category[];
 }

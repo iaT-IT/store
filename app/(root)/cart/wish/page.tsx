@@ -1,6 +1,6 @@
 import Container from '@/components/ui/container';
-import Summary from '../summary';
-import WishList from './wish-list';
+import Summary from '../components/summary';
+import WishList from './components/wish-list';
 
 const CartPage = () => {
    return (

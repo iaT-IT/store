@@ -1,6 +1,6 @@
 import getProducts from '@/actions/getProducts';
 import TrendCard from './trend-card';
-import Heading from '../heading';
+import Heading from '../../../helpers/heading';
 
 const TrendList = async () => {
    const products = await getProducts();

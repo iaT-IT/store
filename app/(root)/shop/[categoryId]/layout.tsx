@@ -1,8 +1,8 @@
 import getColors from '@/actions/getColors';
 import getSizes from '@/actions/getSizes';
 import Container from '@/components/ui/container';
-import Filter from '../filter';
-import MobileFilter from '../mobile-filter';
+import Filter from '../components/filter';
+import MobileFilter from '../components/mobile-filter';
 
 export default async function RootLayout({
    children,

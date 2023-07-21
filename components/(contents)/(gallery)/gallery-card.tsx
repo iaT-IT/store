@@ -1,18 +1,17 @@
 import { cn } from '@/lib/utils';
 import Image, { StaticImageData } from 'next/image';
-import ShopButton from '../shop-button';
+import ShopButton from '@/helpers/shop-button';
 interface GalleryCardProps {
    gallery: {
       image: StaticImageData;
       title: string;
       text: string;
       button: string;
-      font: string;
    };
    className?: string;
 }
 const GalleryCard = ({
-   gallery: { image, button, font, text, title },
+   gallery: { image, button, text, title },
    className,
 }: GalleryCardProps): JSX.Element => {
    return (

@@ -1,5 +1,5 @@
 import { CircleDollarSign, Headphones, LifeBuoy, Truck } from 'lucide-react';
-import Container from '../ui/container';
+import Container from '../../ui/container';
 const Service = () => {
    return (
       <div className="py-0 md:py-5 ">

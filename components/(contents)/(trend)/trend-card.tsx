@@ -5,7 +5,7 @@ import {
    CardDescription,
    CardFooter,
    CardTitle,
-} from '../ui/card';
+} from '../../ui/card';
 import Image from 'next/image';
 import { cn, formatter } from '@/lib/utils';
 import { Product } from '@/type';

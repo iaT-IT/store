@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Cookie } from 'next/font/google';
-import ShopButton from '../shop-button';
+import ShopButton from '../../../helpers/shop-button';
 
 const font = Cookie({ subsets: ['latin'], weight: '400' });
 const BannerCard = () => {

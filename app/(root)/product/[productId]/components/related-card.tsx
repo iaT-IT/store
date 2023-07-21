@@ -1,5 +1,5 @@
-import ProductCard from '@/components/(product)/product-card';
-import NoResult from '@/components/no-result';
+import ProductCard from '@/components/(contents)/(product)/product-card';
+import NoResult from '@/helpers/no-result';
 import { Product } from '@/type';
 
 interface RelatedCardProps {

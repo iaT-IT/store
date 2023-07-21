@@ -1,5 +1,5 @@
 'use client';
-import Heading from '@/components/heading';
+import Heading from '@/helpers/heading';
 import { Button } from '@/components/ui/button';
 import { Category, Color, Size } from '@/type';
 import { useRouter, useSearchParams } from 'next/navigation';

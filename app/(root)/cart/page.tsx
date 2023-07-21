@@ -1,5 +1,5 @@
 import Container from '@/components/ui/container';
-import Summary from './summary';
+import Summary from './components/summary';
 
 const CartPage = () => {
    return (
