@@ -10,13 +10,13 @@ import Image from 'next/image';
 const CartItem = ({ product }: { product: Product }) => {
    return (
       <Card className="w-full grid grid-cols-2 md:grid-cols-3 relative border-none">
-         <CardContent className="col-span-1 p-0">
+         <CardContent className="col-span-1 p-0 aspect-square">
             <div className="aspect-square relative group overflow-hidden">
                <Image
                   alt=""
                   src={product.images[0].url}
                   fill
-                  className="object-contain object-center  "
+                  className="object-contain object-center aspect-[3/4]  "
                />
             </div>
          </CardContent>

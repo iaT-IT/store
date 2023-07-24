@@ -34,14 +34,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <>
          <Card className="w-full  relative border-none">
             <CardContent className="p-2">
-               <div className="aspect-square relative group ">
+               <div className="aspect-[3/4] relative group border border-slate-400 dark:border-slate-200 ">
                   <Image
                      alt=""
                      src={product.images[0].url}
                      width={0}
                      height={0}
                      sizes="100vw"
-                     className="w-full object-contain object-center "
+                     className="w-full object-contain object-center aspect-[3/4] "
                   />
                   <Label action={random < 3 ? active[random] : {}} />
                   <div className=" absolute bottom-0  w-full flex items-center justify-center h-1/3">
