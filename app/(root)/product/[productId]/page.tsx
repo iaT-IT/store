@@ -23,8 +23,14 @@ const ProductPage = async ({
             <Separator />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-               <Tab images={product?.images} />
-               <Info product={product} />
+               {product ? (
+                  <>
+                     <Tab images={product?.images} />
+                     <Info product={product} />
+                  </>
+               ) : (
+                  <></>
+               )}
             </div>
             <Description />
             <Related

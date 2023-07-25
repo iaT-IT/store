@@ -16,7 +16,7 @@ const TrendCard: React.FC<TrendCardProps> = ({ product }) => {
    return (
       <Card className="w-full  relative border-none grid grid-cols-3">
          <CardContent className="p-2 col-span-1">
-            <div className="aspect-[3/4] relative group">
+            <div className="aspect-[3/4] relative group border border-slate-200 rounded-md">
                <Image
                   alt=""
                   src={product.images[0].url}

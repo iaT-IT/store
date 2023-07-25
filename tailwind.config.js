@@ -16,10 +16,16 @@ module.exports = {
             '2xl': '1400px',
          },
       },
+
       fontFamily: {
          cookie: 'Cookie',
       },
       extend: {
+         height: {
+            '1/4': '25%',
+            '1/6': '16.666667%',
+            '1/12': '8.333333%',
+         },
          colors: {
             border: 'hsl(var(--border))',
             input: 'hsl(var(--input))',

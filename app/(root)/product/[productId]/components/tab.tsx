@@ -46,6 +46,7 @@ const Tab: React.FC<TabProps> = ({ images }) => {
             {images.map((image) => (
                <>
                   <TabsContent
+                     key={image.id}
                      value={image.id}
                      className="col-span-4 h-full bg-neutral-200 rounded-md mt-0"
                   >

@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <>
          <Card className="w-full  relative border-none">
             <CardContent className="p-2">
-               <div className="aspect-[3/4] relative group border border-slate-400 dark:border-slate-200 ">
+               <div className="aspect-[3/4] relative group border border-slate-400 dark:border-slate-200 bg-[#EAEAEC] ">
                   <Image
                      alt=""
                      src={product.images[0].url}

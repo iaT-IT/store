@@ -7,7 +7,7 @@ import e from '@/public/instagram/5.webp';
 import f from '@/public/instagram/6.webp';
 import { Instagram } from 'lucide-react';
 const InstagramCard = () => {
-   const text = '@bmo_shop';
+   const text = '@clothing_store';
    return (
       <div className="grid grid-cols-1 md:grid-cols-6">
          {InstagramItem().map((item, index) => (

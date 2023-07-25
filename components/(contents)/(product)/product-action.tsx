@@ -3,6 +3,7 @@ import TooltipInfo from '@/helpers/tooltip-info';
 import useCart from '@/hooks/useCart';
 import { Product } from '@/type';
 import { Heart, Maximize2, ShoppingCart } from 'lucide-react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 interface ProductActionProps {
    product: Product;
@@ -12,6 +13,7 @@ const ProductAction: React.FC<ProductActionProps> = ({ product }) => {
    const cart = useCart();
    const zoomClick = () => {
       router.push(`/product/${product.id}`);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
    };
    const heartClick = () => {
       cart.heartItem(product);
