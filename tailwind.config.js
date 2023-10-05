@@ -86,6 +86,9 @@ module.exports = {
       {
         pattern: /text-./,
       },
+      {
+        pattern: /text-./,
+      },
     ],
   },
   plugins: [require('tailwindcss-animate')],

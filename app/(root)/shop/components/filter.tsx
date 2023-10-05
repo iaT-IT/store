@@ -59,11 +59,11 @@ const Filter: React.FC<FilterProps> = ({ data, type }) => {
               active === item.id
                 ? getType(type) === 2
                   ? color?.value
-                  : 'bg:black dark:bg-white'
-                : 'transparent',
+                  : 'bg-black dark:bg-white'
+                : 'bg-transparent',
               active === item.id
                 ? getType(type) === 2
-                  ? color?.value
+                  ? 'text-white'
                   : 'text-white dark:text-black'
                 : '',
             )}
