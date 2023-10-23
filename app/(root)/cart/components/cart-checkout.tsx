@@ -4,9 +4,7 @@ import useCart from '@/hooks/useCart';
 import { formatter } from '@/lib/utils';
 import axios from 'axios';
 
-const corsHeaders = {
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-};
+const corsHeaders = {};
 
 const CartCheckout = () => {
   const cart = useCart();
