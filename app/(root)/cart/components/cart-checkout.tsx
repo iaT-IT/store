@@ -4,6 +4,12 @@ import useCart from '@/hooks/useCart';
 import { formatter } from '@/lib/utils';
 import axios from 'axios';
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
 const CartCheckout = () => {
   const cart = useCart();
   const getTotal = () => {
@@ -16,6 +22,7 @@ const CartCheckout = () => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
       { productIds: cart.items.map((item) => item.id) },
+      { headers: corsHeaders },
     );
     window.location = response.data.url;
   };
