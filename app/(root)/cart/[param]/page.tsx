@@ -3,7 +3,7 @@ import useCart from '@/hooks/useCart'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-const page = (param:any) => {
+const PageCart = (param:any) => {
     console.log(param)
     const {removeAll} = useCart()
     const router = useRouter()
@@ -15,4 +15,4 @@ const page = (param:any) => {
   return 
 }
 
-export default page
+export default PageCart

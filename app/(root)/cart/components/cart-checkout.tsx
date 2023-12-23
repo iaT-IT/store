@@ -27,7 +27,7 @@ const CartCheckout = () => {
     {
       setIsRender(true)
     }
-  })
+  },[])
   // Hàm tính tổng giá trị của giỏ hàng
   const getTotal = () => {
     const cost = cart.items.reduce((total, product) => {

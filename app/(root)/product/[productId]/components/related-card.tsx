@@ -20,9 +20,9 @@ const RelatedCard: React.FC<RelatedCardProps> = ({ products }) => {
          ))}
       </div>
    ) : (
-      <>
+     
          <NoResult />// Hiển thị component NoResult khi không có sản phẩm
-      </>
+     
    );
 };
 export default RelatedCard;// Xuất component RelatedCard
