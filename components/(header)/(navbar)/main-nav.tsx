@@ -20,13 +20,13 @@ const MainNav: React.FC<MainNavProps> = ({ categories }) => {
                   className="relative cursor-pointer"
                >
                   <TooltipInfo text="Home">
-                     <span className="peer ">Home</span>
+                     <span className="peer ">Trang chủ</span>
                      <Scale active={pathname === '/'} />
                   </TooltipInfo>
                </div>
             </div>
             <div>
-               <TooltipInfo text="Click to Shopping">
+               <TooltipInfo text="Tất cả sản phẩm">
                   <Shop
                      categories={categories}
                      active={
@@ -63,8 +63,8 @@ const MainNav: React.FC<MainNavProps> = ({ categories }) => {
                   onClick={() => router.push('/cart')}
                   className="relative cursor-pointer"
                >
-                  <TooltipInfo text="Click to Checkout">
-                     <span className="peer ">Checkout</span>
+                  <TooltipInfo text="Đến giỏ hàng">
+                     <span className="peer ">Giỏ hàng</span>
                      <Scale active={pathname.includes('/cart')} />
                   </TooltipInfo>
                </div>

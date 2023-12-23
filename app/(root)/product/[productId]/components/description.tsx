@@ -1,19 +1,22 @@
 import { Separator } from '@/components/ui/separator';
 
-const text = `Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim. 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.`;
+const text = `Mô tả chi tiết sản phẩm`;
+// Component Description hiển thị phần mô tả
 const Description = () => {
+   // Render component Description
    return (
       <div className="flex flex-col gap-4">
+         {/* Tiêu đề "Description" với đường phân cách */}
          <span className="text-neutral-900 text-base font-semibold flex items-center justify-center gap-10">
             <Separator className="w-1/2 " />{' '}
             <p className="dark:text-white">Description</p>{' '}
             <Separator className="w-1/2" />
          </span>
+         {/* Nội dung mô tả */}
          <span className="text-neutral-500 text-sm dark:text-neutral-400">
             {text}
          </span>
       </div>
    );
 };
-export default Description;
+export default Description;// Xuất component Description

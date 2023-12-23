@@ -10,20 +10,27 @@ import Image from 'next/image';
 import SocialMedia from './(instagram)/instagram';
 import Heading from '../../helpers/heading';
 import Container from '../ui/container';
+// Component Footer
 const Footer = () => {
+   // Text mô tả chung
    const text =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt cilisis';
+      'Giá trị của một hóa đơn - Chưa bao giờ là thước đo của dịch vụ - Cảm ơn bạn vì đã chọn chúng tôi!';
+      // Render
    return (
       <div className="py-5 md:py-10">
+         {/* Hiển thị phần Social Media */}
          <SocialMedia />
 
+         {/* Container cho nội dung chính của Footer */}
          <Container className="mx-5 md:mx-14">
             <div className="grid  grid-cols-1 md:grid-cols-12 gap-4  md:gap-2  xl:gap-4">
-               {/* /// Part 1 */}
+               {/* /// Part 1 Thông tin chung về công ty */}
                <div className="col-span-4">
                   <div className="flex flex-col gap-2">
                      <Logo />
+                     {/* Hiển thị mô tả chung */}
                      <span className="dark:text-neutral-400">{text}</span>
+                     {/* Hiển thị logo các hình thức thanh toán */}
                      <div className="flex gap-2 items-center justify-between pr-10">
                         {HeaderLogo().map((item, index) => (
                            <TooltipInfo
@@ -42,11 +49,11 @@ const Footer = () => {
                      </div>
                   </div>
                </div>
-               {/* /// Part 2 */}
+               {/* /// Part 2 Liên kết nhanh */}
 
                <div className="col-span-2">
                   <div className="flex flex-col gap-4">
-                     <Heading text="Quick links" />
+                     <Heading text="Liên kết nhanh" />
                      <div className="flex flex-col gap-2">
                         {QuickLinks().map((x, index) => (
                            <span
@@ -59,11 +66,11 @@ const Footer = () => {
                      </div>
                   </div>
                </div>
-               {/* /// Part 3 */}
+               {/* /// Part 3 Tài khoản*/}
 
                <div className="col-span-2">
                   <div className="flex flex-col gap-4">
-                     <Heading text="Quick links" />
+                     <Heading text="Tài khoản" />
                      <div className="flex flex-col gap-2">
                         {Account().map((x, index) => (
                            <span
@@ -76,11 +83,11 @@ const Footer = () => {
                      </div>
                   </div>
                </div>
-               {/* /// Part 4 */}
+               {/* /// Part 4 Đăng ký nhận khuyến mãi */}
 
                <div className="col-span-4">
                   <div className="flex flex-col gap-4">
-                     <Heading text="NEWSLETTER" />
+                     <Heading text="Đăng kí nhận khuyến mãi" />
                      <div className="rounded-full flex items-center border border-neutral-500 justify-between h-10">
                         <div className="px-3 dark:text-neutral-400"> Email</div>
                         <div className="w-1/2 py-1  mr-1    bg-red-500 rounded-full uppercase text-white font-semibold text-center flex items-center justify-center text-sm md:text-base ">
@@ -112,6 +119,7 @@ const Footer = () => {
       </div>
    );
 };
+// Các hình thức thanh toán
 function HeaderLogo() {
    return [
       {
@@ -136,40 +144,41 @@ function HeaderLogo() {
       },
    ];
 }
+// Các liên kết nhanh
 function QuickLinks() {
    return [
       {
-         title: 'About',
+         title: 'Về chúng tôi',
       },
       {
          title: 'Blogs',
       },
       {
-         title: 'Contact',
+         title: 'Liên hệ',
       },
       {
-         title: 'FAQ',
+         title: 'Hỏi đáp',
       },
    ];
 }
-
+// Tài khoản
 function Account() {
    return [
       {
-         title: 'My Account',
+         title: 'Tài khoản',
       },
       {
-         title: 'Orders Tracking',
+         title: 'Theo dõi đơn hàng',
       },
       {
-         title: 'Checkout',
+         title: 'Giỏ hàng',
       },
       {
-         title: 'Wishlist',
+         title: 'Danh sách yêu thích',
       },
    ];
 }
-
+// Các mạng xã hội cho phần NEWSLETTER
 function NewsLetter() {
    return [
       {
@@ -194,4 +203,4 @@ function NewsLetter() {
       },
    ];
 }
-export default Footer;
+export default Footer;// Xuất Component Footer

@@ -5,9 +5,12 @@ import Product from '@/components/(contents)/(product)/product';
 import Service from '@/components/(contents)/(service)/service';
 import Trend from '@/components/(contents)/(trend)/trend';
 
+// Hàm RootPage, là trang chủ của ứng dụng
 export default function RootPage() {
    return (
+         // Hiển thị các component
       <>
+      
          <Gallery />
          <Product />
          <Banner />

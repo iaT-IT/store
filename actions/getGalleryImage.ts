@@ -3,38 +3,39 @@ import b from '@/public/header/2.webp';
 import c from '@/public/header/3.webp';
 import d from '@/public/header/4.webp';
 import e from '@/public/header/5.webp';
+//Trả về danh sách các hình ảnh cho phần Gallery
 const getGalleryImage = () => {
    return [
       {
          image: a,
-         title: 'Women’s fashion',
-         text: 'Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna aliquapendisse ultrices gravida.',
+         title: 'Thời trang Nữ',
+         text: 'Sáng tạo, đa dạng, phong cách.',
          button: 'SHOP NOW',
       },
       {
          image: b,
-         title: 'Men’s fashion',
-         text: '358 items',
+         title: 'Thời trang nam',
+         text: 'Nam tính, chín chắn, linh hoạt.',
          button: 'SHOP NOW',
       },
       {
          image: c,
-         title: 'Kid’s fashion',
-         text: '273 items',
+         title: 'Thời trang trẻ em',
+         text: 'Ngộ nghĩnh, thoải mái, an toàn',
          button: 'SHOP NOW',
       },
       {
          image: d,
-         title: 'Cosmetics',
-         text: '159 items',
+         title: 'Thời trang Unisex',
+         text: 'Đồng nhất, linh hoạt, hiện đại.',
          button: 'SHOP NOW',
       },
       {
          image: e,
-         title: 'Accessories',
-         text: '792 items',
+         title: 'Phụ kiện thời trang',
+         text: 'Hoàn thiện, cá tính, điểm nhấn',
          button: 'SHOP NOW',
       },
    ];
 };
-export default getGalleryImage;
+export default getGalleryImage;// Xuất hàm getGalleryImage

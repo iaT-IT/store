@@ -5,24 +5,33 @@ import { Product } from '@/type';
 import { Heart, Maximize2, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+// Định nghĩa các props cho thành phần ProductAction
 interface ProductActionProps {
    product: Product;
 }
+// Định nghĩa thành phần ProductAction
 const ProductAction: React.FC<ProductActionProps> = ({ product }) => {
-   const router = useRouter();
-   const cart = useCart();
+   const router = useRouter();// Lấy đối tượng router
+   const cart = useCart();// Sử dụng hook useCart để lấy đối tượng giỏ hàn
+
+   // Hàm xử lý sự kiện khi nhấp vào để phóng to
    const zoomClick = () => {
-      router.push(`/product/${product.id}`);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      router.push(`/product/${product.id}`);// Di chuyển đến trang chi tiết sản phẩm
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Di chuyển mượt đến đầu trang
    };
+   // Hàm xử lý sự kiện khi nhấp vào để thêm vào danh sách mong muốn
    const heartClick = () => {
+      // Thêm sản phẩm vào danh sách mong muốn
       cart.heartItem(product);
    };
+   // Hàm xử lý sự kiện khi nhấp vào để thêm vào giỏ hàng
    const cartClick = () => {
-      cart.addItem(product);
+      cart.addItem(product);// Thêm sản phẩm vào giỏ hàng
    };
+   // Hiển thị thành phần với ba nút hành động và bảng chú thích
    return (
       <div className="flex gap-3   ">
+         {/* Nút phóng to với chú thích */}
          <TooltipInfo text="Zoom">
             <div
                onClick={zoomClick}
@@ -32,6 +41,7 @@ const ProductAction: React.FC<ProductActionProps> = ({ product }) => {
                <Maximize2 size={25} />{' '}
             </div>
          </TooltipInfo>
+         {/* Nút Thêm vào Danh sách yêu thích*/}
          <TooltipInfo text="Add to wish list">
             <div
                onClick={heartClick}
@@ -41,6 +51,7 @@ const ProductAction: React.FC<ProductActionProps> = ({ product }) => {
                <Heart size={25} />
             </div>
          </TooltipInfo>
+         {/* Nút Thêm vào Giỏ hàng*/}
          <TooltipInfo text="Add to cart">
             <div
                onClick={cartClick}
@@ -53,4 +64,4 @@ const ProductAction: React.FC<ProductActionProps> = ({ product }) => {
       </div>
    );
 };
-export default ProductAction;
+export default ProductAction;// Xuất ProductAction

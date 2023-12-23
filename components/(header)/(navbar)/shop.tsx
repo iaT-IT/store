@@ -18,7 +18,7 @@ const Shop: React.FC<ShopProps> = ({ categories, active }) => {
                href={'/shop'}
                className="relative flex h-full"
             >
-               <span className="peer">Shop</span>
+               <span className="peer">Sản phẩm</span>
                <Scale active={active} />
             </Link>
          </HoverCardTrigger>

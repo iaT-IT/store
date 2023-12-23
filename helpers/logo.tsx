@@ -15,7 +15,7 @@ const Logo = () => {
                font.className,
             )}
          >
-            BMO Shop
+            DT Shop
          </span>
       </TooltipInfo>
    );
